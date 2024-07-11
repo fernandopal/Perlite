@@ -36,12 +36,12 @@ jobs:
             sec77/perlite
           # Docker tags based on the following events/attributes
           tags: |
-            type=pep440,pattern={{version}}
+            type=sha
+          # type=pep440,pattern={{version}}
           # type=ref,event=branch
           # type=ref,event=pr
           # type=semver,pattern={{major}}.{{minor}}
           # type=semver,pattern={{major}}
-          # type=sha
           # type=schedule
       - name: Build and push
         uses: docker/build-push-action@v4
